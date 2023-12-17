@@ -3,20 +3,20 @@ import os
 import subprocess
 from twilio.rest import Client 
 def whatsapp(ip,conn): 
-    account_sid = 'ACdbc234a797c8fac7f6b31676e428a586' 
-    auth_token = '4fc15131f5049bd909682b368bfb7433' 
+    account_sid = 'YOUR TWILIO SID' 
+    auth_token = 'YOUR TWILIO AUTH TOKEN' 
     client = Client(account_sid, auth_token) 
     if(conn==0):
         message = client.messages.create( 
                                     from_='whatsapp:+14155238886',  
                                     body='IP: '+str(ip)+' trying to connect',
-                                    to='whatsapp:+919364393901' 
+                                    to='whatsapp:YOUR NUMBER' 
                                 ) 
     if(conn==1):
         message = client.messages.create( 
                                     from_='whatsapp:+14155238886',  
                                     body='IP: '+str(ip)+' connected',
-                                    to='whatsapp:+919364393901' 
+                                    to='whatsapp:YOUR NUMBER' 
                                 ) 
 
 
